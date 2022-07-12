@@ -7,7 +7,9 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 */
 
 function sumTwoSmallestNumbers(numbers) {  
-  return numbers.sort((a, b) => b - a).slice(-2).reduce((a, b) => a + b, 0)
+  const reduceArray = numbers.sort((a, b) => b - a).slice(-2)
+  return reduceArray[0] + reduceArray[1]
+
 }
 
 console.log(sumTwoSmallestNumbers([4,5,9,2]))
